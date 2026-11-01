@@ -1,0 +1,10 @@
+// Задание 3. Перегрузка функции countPages 
+// Версия для двух книг 
+int countPages(int a, int b) {
+	return a + b;
+}
+
+// Версия для трёх книг 
+int countPages(int a, int b, int c) {
+	return a + b + c;
+}
