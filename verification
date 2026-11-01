@@ -1,0 +1,33 @@
+// Главная функция для проверки всех заданий
+int main() {
+	// Устанавливаем русский язык для консоли (может потребоваться в Windows)
+	setlocale(LC_ALL, ru_RU.UTF - 8);
+
+	cout << "--- Тест Задания 1 ---" << endl;
+	int pages = pagesRead(15, 4); // 15 страниц в день, 4 дня
+	cout << "Прочитано страниц: " << pages << endl << endl;
+
+	cout << "--- Тест Задания 2 ---" << endl;
+	int booksAvailable = 3;
+	cout << "Книг до выдачи: " << booksAvailable << endl;
+	takeBook(booksAvailable);
+	cout << "Книг после выдачи: " << booksAvailable << endl;
+
+	// Проверка, что ниже нуля не уходит
+	booksAvailable = 0;
+	takeBook(booksAvailable);
+	cout << "Книг, если их 0 (остается 0): " << booksAvailable << endl << endl;
+
+	cout << "--- Тест Задания 3 ---" << endl;
+	cout << "Страниц в двух книгах: " << countPages(100, 150) << endl;
+	cout << "Страниц в трех книгах: " << countPages(100, 150, 200) << endl << endl;
+
+	cout << "--- Тест Задания 4 ---" << endl;
+	cout << "Вызов 1 (только полка, кабинет по умолчанию):" << endl;
+	showShelf(5);
+
+	cout << "Вызов 2 (полка и кабинет указаны явно):" << endl;
+	showShelf(10, 42);
+
+	return 0;
+}
