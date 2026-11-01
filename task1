@@ -1,0 +1,6 @@
+#include <iostream>
+using namespace std;
+// Задание 1. Функция возвращает количество прочитанных страниц 
+int pagesRead(int pagesPerDay, int days) {
+	return pagesPerDay * days;
+}
